@@ -26,21 +26,21 @@ app.use(express.urlencoded({ extended: true }))
 // app.use(authMiddleware)
 
 //login, sign
-app.use("/auth", authRouter);
+app.use("/api/auth", authRouter);
 //addproducts, delete products
-app.use("/owner", ownerRouter);
+app.use("/api/owner", ownerRouter);
 //get products
-app.use("/product", productRouter);
+app.use("/api/product", productRouter);
 //review, wishlist
-app.use("/user", userRouter);
+app.use("/api/user", userRouter);
 
 db.on("error", (err) => {console.error("Mongoose connection error", err)});
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post("/isAdmin", authMiddleware, async(req, res) => {
+app.post("/api/isAdmin", authMiddleware, async(req, res) => {
   try {
     const user = await User.findOne({
       _id: req.user._id,
@@ -51,7 +51,7 @@ app.post("/isAdmin", authMiddleware, async(req, res) => {
   }
 });
 
-app.post("/logout", (req, res) => {
+app.post("/api/logout", (req, res) => {
   res.clearCookie("jwt", { secure: true, sameSite:"none", httpOnly: true });
   res.send("Cookie cleared successfully");
 });
@@ -66,7 +66,7 @@ const transporter = nodemailer.createTransport({
   }, 
 });
 
-app.post("/send-email", (req, res) => {
+app.post("/api/send-email", (req, res) => {
   const { to, name, price, address, method, orderNum } = req.body;
 
   const currentDate = new Date();
