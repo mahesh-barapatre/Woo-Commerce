@@ -107,7 +107,7 @@ function Product() {
   ];
 
   return (
-    <div className="flex p-3 py-10 min-h-full bg-slate-100">
+    <div className="flex flex-col sm:flex-row p-3 py-10 min-h-full bg-slate-100">
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -120,11 +120,11 @@ function Product() {
         pauseOnHover
         theme="light"
       />
-      <div className="w-2/5 shadow-lg h-fit">
+      <div className="w-full sm:w-2/5 shadow-lg mt-5 h-fit">
         <Carousel images={productImages} />
       </div>
-      <div className="w-2/5 flex flex-col items-center">
-        <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+      <div className="w-full sm:w-2/5 flex flex-col items-center">
+        <div className="max-w-md w-full bg-white mt-5 p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">{details.name}</h2>
 
           {/* <!-- Product Information --> */}
@@ -196,7 +196,7 @@ function Product() {
         </div>
       </div>
 
-      <div className="w-1/5">
+      <div className="w-full sm:w-1/5 mt-5">
         <ReviewForm id={details._id} />
       </div>
     </div>

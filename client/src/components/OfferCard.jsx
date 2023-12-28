@@ -2,7 +2,7 @@ import React from 'react'
 
 function OfferCard({img, exp, dis, code, quote}) {
   return (
-    <div className="w-52 bg-white overflow-hidden shadow-md m-3">
+    <div className="sm:w-52 bg-white overflow-hidden shadow-md m-3">
       
       <div className="h-36 bg-blue-100 rounded">
         <img

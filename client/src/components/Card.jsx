@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import serverUrl from '../config.js';
 
-const Card = ({ active = "home", id, name, category, price, images }) => {
+const Card = ({ active = "home", id, name, category, price, images, setUpdate }) => {
 
   const addToWishlist = async () => {
     try {
@@ -59,6 +59,7 @@ const Card = ({ active = "home", id, name, category, price, images }) => {
         {},
         { withCredentials: true }
       );
+      setUpdate(prev=>!prev)
       // console.log(response);
     } catch (error) {
       console.log(error);
@@ -130,7 +131,7 @@ const Card = ({ active = "home", id, name, category, price, images }) => {
         pauseOnHover
         theme="light"
       />
-      <div className="w-60 bg-white overflow-hidden shadow-md m-3">
+      <div className="w-60 bg-white overflow-hidden shadow-md sm:m-3 mx-auto my-3">
         <Icon
           icon="majesticons:box"
           className="inline text-purple-500"

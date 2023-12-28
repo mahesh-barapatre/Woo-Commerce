@@ -17,7 +17,7 @@ function Filter() {
   ]
 
   return (
-    <div className="fixed w-1/4">
+    <div className="w-full ">
       <div className="flex flex-col text-lg font-semibold text-white p-3 gradient-col my-5">
         <Carousel images={img} autoplayInterval={2000}/>
       </div>

@@ -7,13 +7,13 @@ function Success() {
 
   const { Urlname, email, Urladdress, Urlmethod, orderNum } = useParams();
   const method = decodeURIComponent(Urlmethod);
-  console.log(method)
+  // console.log(method)
   const address = decodeURIComponent(Urladdress);
   const name = decodeURIComponent(Urlname);
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-white text-gray-500">
-      <div className="w-1/3 flex space-x-4 mb-5">
+    <div className="flex p-8 sm:p-0 flex-col justify-center items-center min-h-screen bg-white text-gray-500">
+      <div className="w-full sm:w-1/3 flex space-x-4 mb-5">
         <Icon
           icon="line-md:circle-twotone-to-confirm-circle-twotone-transition"
           width="50"
@@ -27,7 +27,7 @@ function Success() {
         </div>
       </div>
 
-      <div className="w-1/3 border border-gray-300 flex flex-col p-5">
+      <div className="w-full sm:w-1/3 border border-gray-300 flex flex-col p-5">
         <div className="flex space-x-7">
           <div className="w-full flex flex-col mb-10">
             <span className="text-xl text-black">Contact Information</span>
@@ -46,7 +46,7 @@ function Success() {
           <span className="">{method}</span>
         </div>
       </div>
-      <div className="w-1/3">
+      <div className="w-full sm:w-1/3">
 
       <button
         onClick={()=>navigate('/')}

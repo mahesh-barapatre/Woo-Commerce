@@ -4,23 +4,23 @@ import { Icon } from '@iconify/react';
 function Footer() {
 
   return (
-    <div className='border border-slate-400 flex w-full h-60'>
-      <div className="flex justify-evenly items-start w-1/2 text-sm">
-        <div className='flex flex-col justify-evenly h-full'>
+    <div className='border border-slate-400 flex p-3 space-y-5 flex-col sm:flex-row w-full'>
+      <div className="flex justify-evenly items-start w-full sm:w-1/2 text-sm">
+        <div className='flex flex-col space-y-3 justify-evenly h-full'>
           <h6 className='text-slate-400 uppercase font-semibold'>Company</h6>
           <p>FAQ</p>
           <p>About</p>
           <p>Careers</p>
           <p>Blog</p>
         </div>
-        <div className='flex flex-col text-start justify-evenly h-full'>
+        <div className='flex flex-col space-y-3 text-start justify-evenly h-full'>
           <h6 className='text-slate-400 uppercase font-semibold'>help & contact</h6>
           <p>Help Centre</p>
           <p>Email Us</p>
           <p>080-4040-4242</p>
           <h6 className='font-bold'>Terms & Privacy</h6>
         </div>
-        <div className='flex flex-col text-start justify-evenly h-full'>
+        <div className='flex flex-col space-y-3 text-start justify-evenly h-full'>
           <h6 className='text-slate-400 uppercase font-semibold'>more from us</h6>
           <p>Bulk/Party Order</p>
           <p>Cake Order</p>
@@ -31,7 +31,7 @@ function Footer() {
       </div>
 
 
-      <div className="flex flex-col justify-evenly w-2/5">
+      <div className="flex flex-col space-y-5 justify-evenly w-full sm:w-2/5">
         <h6 className="uppercase text-slate-400 font-semibold">subscribe to our DROOLWORTHY newspaper</h6>
         <div className="flex items-center">
   <input

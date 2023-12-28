@@ -15,7 +15,7 @@ function MenuNav() {
 
   return (
       
-      <div className="bg-white flex justify-evenly fixed top-14 z-50 rounded shadow-md w-8/12 m-auto">
+      <div className="bg-white flex justify-evenly z-50 rounded shadow-md w-8/12 m-auto">
         
         <select
           id="category"
