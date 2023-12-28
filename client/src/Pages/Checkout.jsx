@@ -66,10 +66,10 @@ function Checkout() {
   };
 
   return (
-    <div className="flex bg-gray-100 p-5 space-x-3">
+    <div className="flex flex-col-reverse sm:flex-row bg-gray-100 p-5 sm:space-x-3">
       <CheckoutForm />
 
-      <div className="w-4/12 mx-auto h-fit my-8 p-6 bg-white rounded-md shadow-md">
+      <div className="sm:w-4/12 mx-auto h-fit mt-12 sm:my-8 p-6 bg-white rounded-md shadow-md">
         <div
           onClick={() => navigate("/offer")}
           className="w-full cursor-pointer my-3 border text-xl justify-evenly item-center text-gray-500 flex px-1 py-1"
@@ -112,7 +112,7 @@ function Checkout() {
 
         <div className="w-full text-2xl font-bold flex justify-between text-gray-700">
           <span>Payable Amount</span>
-          <span>${total}</span>
+          <span>${total.toFixed(2)}</span>
         </div>
       </div>
     </div>

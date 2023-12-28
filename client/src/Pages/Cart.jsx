@@ -14,8 +14,8 @@ function Cart() {
   const paylable = total.toFixed(2);
 
   return (
-    <div className="bg-gray-100 flex px-4 py-10">
-      <div className="flex flex-col w-8/12">
+    <div className="bg-gray-100 flex-col sm:flex-row flex px-4 py-10">
+      <div className="flex flex-col w-full sm:w-8/12">
         <div className="border bg-white border-gray-300 m-3 flex flex-wrap">
           {cartList.map((product, index) => {
             let item = product;
@@ -42,7 +42,7 @@ function Cart() {
         </div>
       </div>
 
-      <div className="flex flex-col w-4/12">
+      <div className="flex flex-col w-11/12 sm:w-4/12">
         <div className="border w-full h-48 text-gray-700 justify-around bg-white border-gray-300 flex flex-col px-8 py-5 m-3">
           <span className="text-lg font-bold">Delivery Time</span>
           <div className="flex flex-col">

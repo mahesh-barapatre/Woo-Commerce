@@ -8,6 +8,8 @@ function Admin() {
 
   const [addedItems, setAddedItems] = useState([])
   const [user, setUser] = useState({})
+  const [update, setUpdate] = useState({})
+
 
   useEffect(() => {
     const getAddedProducts=async () => {
@@ -29,13 +31,13 @@ function Admin() {
     }
     
       getAddedProducts();
-  },[])
+  },[update])
 
   const navigate = useNavigate()
 
   return (
-     <div className='bg-gray-100 flex px-4 py-10'>
-      <div className="flex flex-col w-8/12">
+     <div className='bg-gray-100 flex flex-col-reverse sm:flex-row px-4 py-10'>
+      <div className="flex flex-col w-full sm:w-8/12">
         <div className='border bg-white border-gray-300 m-3 flex flex-wrap'>
 
           {
@@ -49,6 +51,7 @@ function Admin() {
                   category={item.category}
                   price={item.price}
                   images={item.images}
+                  setUpdate={setUpdate}
                 />
               )
             })
@@ -58,8 +61,8 @@ function Admin() {
        
       </div>
 
-      <div className="w-4/12">
-        <div className='h-48 p-10 my-3 gradient fixed flex flex-col text-xl justify-around font-bold text-white'>
+      <div className="sm:w-4/12 w-full mt-6">
+        <div className='h-48 p-10 my-3 gradient sm:fixed flex flex-col text-xl justify-around font-bold text-white'>
           <span className='text-2xl'>{user.name}</span>
           <span className='text-lg'>{user.email}</span>
           <span className='uppercase'>{user.shop}</span>

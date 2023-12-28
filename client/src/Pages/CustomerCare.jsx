@@ -3,7 +3,7 @@ import React from 'react'
 function CustomerCare() {
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
-      <div className="flex bg-white shadow-md text-center p-5 flex-col items-center justify-evenly h-1/2 w-1/4">
+      <div className="flex bg-white shadow-md text-center p-5 flex-col items-center justify-evenly w-3/4 h-1/2 sm:w-1/4">
         <h5>Customer Support</h5>
         <p className='text-sm'>Our customer experience team is
           available all days from

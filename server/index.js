@@ -18,7 +18,7 @@ const app = express()
 
 app.use(cors({
     origin: BASE_URL,
-  credentials: true,
+  credentials: true, 
 }))
 app.use(express.json())
 app.use(cookieParser())
@@ -59,11 +59,11 @@ app.post("/logout", (req, res) => {
 const transporter = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
-  port: 587,
+  port: 465,
   auth: {
     user: gmail_user, // Your Gmail email address
-    pass: gmail_pass, // Your Gmail password
-  },
+    pass: gmail_pass, // Your Gmail password 
+  }, 
 });
 
 app.post("/send-email", (req, res) => {
@@ -92,19 +92,20 @@ const formattedDate = `${day.toString().padStart(2, '0')}-${month.toString().pad
     Date of Purchase: ${formattedDate}<p>
     <p>If you have any questions, feel free to contact us at help@woo.commerce.</p>
     <p>Best regards,<br>
-    Mahesh Barapatre<br>
+    Mahesh Barapatre<br> 
     CEO<br>
     Woo Commerce</p>`,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return res.status(500).send(error);
-    }
-    else
-    res.status(200).send("Email sent: " + info.response);
-  });
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     console.log(error);
+  //     return res.status(500).send(error);
+  //   }
+  //   else
+  //   res.status(200).send("Email sent: " + info.response);
+  // });
+    res.status(200).send("Email sent: " + mailOptions);
 });
 
 

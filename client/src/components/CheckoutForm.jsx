@@ -30,8 +30,8 @@ function CheckoutForm() {
           method: selectedPaymentOption,
           price: total,
           orderNum: orderNum
-
-      })
+          
+        })
       navigate(`/success/${name}/${email}/${address}/${selectedPaymentOption}/${orderNum}`);
     } else {
       console.error("Please select a payment option and email adn address!");
@@ -39,7 +39,7 @@ function CheckoutForm() {
   };
 
   return (
-    <div className="w-8/12 my-5 flex flex-col">
+    <div className="sm:w-8/12 w-full my-5 flex flex-col">
       {/* //Delivery address */}
       <div className="w-full mx-auto p-8 m-3 bg-white rounded-md shadow-md">
         <div className="text-xl font-bold text-gray-400 flex">

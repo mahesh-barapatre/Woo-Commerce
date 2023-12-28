@@ -38,12 +38,12 @@ function Header() {
   const iconCss = "transform cursor-pointer hover:scale-150 transition-transform duration-300 ease-in-out";
 
   return (
-    <div className="flex justify-between items-center shadow-lg pl-10 w-full fixed top-0 bg-white z-50">
-      <div className="w-1/5">
+    <div className="flex flex-col sm:flex-row justify-between items-center shadow-lg py-3 sm:pl-10 w-full fixed top-0 bg-white z-50">
+      <div className="w-full sm:w-1/5 pl-5">
         <Icon icon="logos:woocommerce" width={"290"} />
       </div>
 
-      <div className="flex w-2/5 justify-evenly items-center">
+      <div className="flex w-full sm:w-2/5 justify-evenly items-center">
         <Icon
           onClick={() => navigate("/")}
           className={iconCss}
@@ -94,7 +94,7 @@ function Header() {
           )
         }
         <div className="">
-          <div className="bg-red-500 absolute right-8 top-1 z-10 px-2 rounded-full text-white font-bold">
+          <div className="bg-red-500 absolute right-4 top-14 sm:right-8 sm:top-4 z-10 px-2 rounded-full text-white font-bold">
             {itemCount}{" "}
           </div>
           <Icon

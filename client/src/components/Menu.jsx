@@ -21,7 +21,7 @@ function Menu({ products }) {
     // }, []);
 
     return (
-        <div className="w-full p-10 h-full flex flex-wrap">
+        <div className="w-full mt-5 pl-12 sm:p-10 h-full flex flex-wrap">
             {products.map((product, index) => {
                 return (
                     <Card

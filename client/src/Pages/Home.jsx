@@ -137,14 +137,14 @@ function Home() {
 
   return (
     <>
-      <div className="flex w-full h-full">
-        <div className="w-2/5 p-10 flex flex-col">
+      <div className="flex flex-col sm:flex-row w-full h-full">
+        <div className="w-full sm:w-2/5 p-10 flex flex-col">
           <Filter />
         </div>
         <div className="flex flex-col w-full">
           {/* <MenuNav/> */}
 
-          <div className="bg-white flex justify-evenly fixed top-14 z-50 rounded shadow-md w-8/12 m-auto">
+          <div className="bg-white sticky flex justify-evenly top-28 sm:fixed sm:top-16 z-50 rounded shadow-md w-full sm:w-8/12 m-auto">
             <select
               id="category"
               name="category"
@@ -177,7 +177,7 @@ function Home() {
             <div
               type="button"
               onClick={performSearch}
-              className="w-1/12 mt-1 bg-purple-500 text-white py-2 px-4 rounded-r-sm hover:bg-purple-600 focus:outline-none focus:ring "
+              className="w-1/12 mt-1 bg-purple-500 text-white pt-2 sm:py-2 sm:px-4 rounded-r-sm hover:bg-purple-600 focus:outline-none focus:ring "
             >
               <Icon icon="ic:round-search" width="30" />
             </div>

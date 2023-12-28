@@ -55,7 +55,7 @@ function Offers() {
         <Icon icon="devicon:woocommerce" width="100" />
           Offers
       </div>
-      <div className="w-full py-10 px-40 flex flex-col">
+      <div className="w-full py-10 px-8 sm:px-40 flex flex-col">
         <div className="w-full flex">
           <div className='text-lg font-semibold text-gray-400'>Offers & discount coupons</div>
           <div className='w-8/12 border-b-2 border-gray-400'></div>

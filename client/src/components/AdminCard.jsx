@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import serverUrl from '../config'
 
-function AdminCard({ id, name, category, images, price }) {
+function AdminCard({ id, name, category, images, price, setUpdate }) {
   
 
   const removeItem = async() => {
     try {
       const response = await axios.delete(`${serverUrl}/owner/delete/${id}`);
       console.log(response)
+      setUpdate(prev=>!prev)
     } catch (error) {
       console.log(error.message)
     }

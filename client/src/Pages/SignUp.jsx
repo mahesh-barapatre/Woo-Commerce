@@ -34,7 +34,7 @@ const Register = () => {
   const navigate = useNavigate()
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="p-8 rounded shadow-md w-1/4 bg-purple-50">
+      <div className="p-8 rounded shadow-md  w-10/12 sm:w-1/4 bg-purple-50">
         <h2 className="text-2xl font-bold mb-6 text-purple-500">Register</h2>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-600">
